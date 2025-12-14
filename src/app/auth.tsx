@@ -54,7 +54,7 @@ export default function AuthScreen() {
 
       if (auth.success) {
         console.log("Authentication successful");
-        // router.replace("/home");
+        router.replace("/home");
       } else {
         setError("Authentication failed. Please try again.");
       }
