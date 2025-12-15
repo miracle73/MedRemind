@@ -29,7 +29,7 @@ yarn-error.*
 # macOS
 .DS_Store
 *.pem
-
+medremind-b8c62-firebase-adminsdk-fbsvc-e75f987754.json
 # local env files
 .env*.local
 
