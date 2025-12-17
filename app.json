@@ -25,7 +25,12 @@
       "package": "com.mirack.medremind",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "googleServicesFile": "./google-services.json"
+      "googleServicesFile": "./google-services.json",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAPnmjJ5j2luLLuWLGzYPqJENd9Z5Sl-DE"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -37,6 +42,13 @@
         {
           "icon": "./assets/medremindIcon.png",
           "color": "#000000"
+        }
+      ],
+      [
+        "expo-maps",
+        {
+          "requestLocationPermission": "true",
+          "locationPermission": "Allow $(PRODUCT_NAME) to use your location"
         }
       ]
     ],
