@@ -1,0 +1,63 @@
+// app.config.js
+export default {
+  expo: {
+    name: "MedRemind",
+    slug: "MedRemind",
+    scheme: "MedRemind",
+    version: "1.0.0",
+    orientation: "portrait",
+    icon: "./assets/icon.png",
+    userInterfaceStyle: "light",
+    newArchEnabled: true,
+    splash: {
+      image: "./assets/splash-icon.png",
+      resizeMode: "contain",
+      backgroundColor: "#ffffff",
+    },
+    ios: {
+      supportsTablet: true,
+      bundleIdentifier: "com.mirack.medremind",
+    },
+    android: {
+      adaptiveIcon: {
+        foregroundImage: "./assets/adaptive-icon.png",
+        backgroundColor: "#ffffff",
+      },
+      package: "com.mirack.medremind",
+      edgeToEdgeEnabled: true,
+      predictiveBackGestureEnabled: false,
+      googleServicesFile: "./google-services.json",
+      config: {
+        googleMaps: {
+          apiKey: process.env.GOOGLE_MAPS_API_KEY,
+        },
+      },
+    },
+    web: {
+      favicon: "./assets/favicon.png",
+    },
+    plugins: [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          icon: "./assets/medremindIcon.png",
+          color: "#000000",
+        },
+      ],
+      [
+        "expo-maps",
+        {
+          requestLocationPermission: "true",
+          locationPermission: "Allow $(PRODUCT_NAME) to use your location",
+        },
+      ],
+    ],
+    extra: {
+      router: {},
+      eas: {
+        projectId: "ba5263e5-5439-4d27-ab2c-85363a6220dd",
+      },
+    },
+  },
+};
